@@ -15,7 +15,15 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section></section>
+      <section className="mainWrapper__facultiesSection">
+        {/* CARDS WITH FACULTIES INFO MUST BE HERE TODO:*/}
+      </section>
+
+      <section className="mainWrapper__facultiesSection">
+        <Title className="facultiesSection__title">
+          {titles.facultiesSection}
+        </Title>
+      </section>
     </main>
   );
 };
