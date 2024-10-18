@@ -1,8 +1,11 @@
+import { titles } from "../../constants/stringConstants";
+import Title from "../../ui/Title";
+
 const MainPage = () => {
   return (
     <main className="mainWrapper">
       <section className="mainWrapper__greetingSection">
-        <h1 className="greetingSection__title">TITLE</h1>
+        <Title className="greetingSection__title">{titles.greetingTitle}</Title>
 
         <div className="greetingSection__greetingTextWrapper">
           Lorem <span>ipsum dolor, sit</span> amet consectetur adipisicing elit.{" "}

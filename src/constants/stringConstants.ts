@@ -1,7 +1,9 @@
 export const urls = {
   basename: "/",
 };
-
+export const titles = {
+  greetingTitle: "Rozwiń skrzydła u nas",
+};
 export const headerLinkNames = {
   mainPageLink: "Strona główna",
   admissionToSchoolLink: "Przyjęcie do szkoły",
