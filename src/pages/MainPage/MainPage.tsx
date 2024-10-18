@@ -1,4 +1,5 @@
-import { titles } from "../../constants/stringConstants";
+import Card from "../../components/Card";
+import { titles, facultiesInfo } from "../../constants/stringConstants";
 import Title from "../../ui/Title";
 
 const MainPage = () => {
@@ -16,7 +17,9 @@ const MainPage = () => {
       </section>
 
       <section className="mainWrapper__facultiesSection">
-        {/* CARDS WITH FACULTIES INFO MUST BE HERE TODO:*/}
+        {facultiesInfo.map((facult) => (
+          <Card key={facult.id} facultInfo={facult} />
+        ))}
       </section>
 
       <section className="mainWrapper__facultiesSection">
