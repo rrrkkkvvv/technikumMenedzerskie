@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
-interface TitleProps {
+interface ITitleProps {
   children: ReactNode;
   className: string;
 }
 
-const Title = ({ children, className }: TitleProps) => {
+const Title = ({ children, className }: ITitleProps) => {
   return <h1 className={className}>{children}</h1>;
 };
 

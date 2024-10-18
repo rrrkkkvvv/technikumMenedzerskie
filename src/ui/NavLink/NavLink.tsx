@@ -1,11 +1,11 @@
 import React from "react";
 
-interface LinkProps {
+interface ILinkProps {
   url: string;
   children: React.ReactNode;
 }
 
-const NavLink = ({ url, children }: LinkProps) => {
+const NavLink = ({ url, children }: ILinkProps) => {
   return <a href={url}>{children}</a>;
 };
 
