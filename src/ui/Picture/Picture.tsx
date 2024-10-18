@@ -1,5 +1,5 @@
 interface IPictureProps {
-  className: string;
+  className?: string;
   src: string;
   alt: string;
 }

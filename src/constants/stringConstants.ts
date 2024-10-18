@@ -1,3 +1,5 @@
+import { TFacultInfo } from "../shared/types/FacultType";
+
 export const urls = {
   basename: "/",
 };
@@ -13,13 +15,6 @@ export const headerLinkNames = {
   newsLink: "Aktualności",
   contactLink: "Kontakt",
   ukraineLink: "Україна",
-};
-
-type TFacultInfo = {
-  id: number;
-  title: string;
-  text: string;
-  imgUrl: string;
 };
 
 export const facultiesInfo: TFacultInfo[] = [
