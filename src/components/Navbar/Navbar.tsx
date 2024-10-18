@@ -3,7 +3,7 @@ import NavLink from "../../ui/NavLink";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <NavLink url="#">{headerLinkNames.mainPageLink}</NavLink>
       <NavLink url="#">{headerLinkNames.admissionToSchoolLink}</NavLink>
       <NavLink url="#">{headerLinkNames.ourStaffLink}</NavLink>
@@ -11,7 +11,7 @@ const Navbar = () => {
       <NavLink url="#">{headerLinkNames.newsLink}</NavLink>
       <NavLink url="#">{headerLinkNames.contactLink}</NavLink>
       <NavLink url="#">{headerLinkNames.ukraineLink}</NavLink>
-    </div>
+    </nav>
   );
 };
 
