@@ -1,17 +1,19 @@
- 
 const MainPage = () => {
   return (
-    <>
-      {/* Wrapper of main page */}
-      <div className="mainWrapper">
-    
+    <main className="mainWrapper">
+      <section className="mainWrapper__greetingSection">
+        <h1 className="greetingSection__title">TITLE</h1>
 
-        <main>
-          
-        </main>
+        <div className="greetingSection__greetingTextWrapper">
+          Lorem <span>ipsum dolor, sit</span> amet consectetur adipisicing elit.{" "}
+          <span>Excepturi voluptatibus</span> quo obcaecati! Lorem ipsum dolor
+          sit amet<span> consectetur adipisicing</span> elit.
+          <span> Architecto</span> assumenda quis dicta dignissimos ullam!
+        </div>
+      </section>
 
-      </div>
-    </>
+      <section></section>
+    </main>
   );
 };
 
