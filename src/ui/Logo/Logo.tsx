@@ -1,10 +1,10 @@
 const Logo = () => {
   return (
-    <>
-      <div className="Logo">
+  
+      <div className="logo">
         <img src="/public/icons/logo-1.png" alt="Logo" />
       </div>
-    </>
+    
   );
 };
 
