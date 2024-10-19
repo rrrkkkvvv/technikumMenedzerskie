@@ -24,16 +24,19 @@ const MainPage = () => {
         ))}
       </section>
       <hr />
+
       <section className="mainWrapper__carousels">
-        <Title className="facultiesSection__title">
-          {titles.practicesSection}
+        <Title className="carousels__practicesTitle">
+          {titles.practicesImagesTitle}
         </Title>
 
-        <div className="facultiesSection__practicesCarouselWrapper">
+        <div className="carousels__practicesCarouselWrapper">
           {/* PRAKTYKI KARUSELЬ */}
         </div>
-
-        <div className="facultiesSection__sponsoresCarouselWrapper">
+        <Title className="carousels__sponsoresTitle">
+          {titles.practiciesPlacesTitle}
+        </Title>
+        <div className="carousels__sponsoresCarouselWrapper">
           {/* СПОНСОРЫ KARUSELЬ */}
         </div>
       </section>

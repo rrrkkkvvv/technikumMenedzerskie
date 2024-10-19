@@ -5,7 +5,8 @@ export const urls = {
 };
 export const titles = {
   greetingTitle: "Rozwiń skrzydła u nas",
-  practicesSection: "Praktyki i staże zagraniczne",
+  practicesImagesTitle: "Praktyki i staże zagraniczne",
+  practiciesPlacesTitle: "Miejsca praktyk i staży",
 };
 export const headerLinkNames = {
   mainPageLink: "Strona główna",
