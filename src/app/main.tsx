@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import { urls } from "./constants/stringConstants";
-import Header from "./modules/Header";
-import MainPage from "./pages/MainPage/MainPage";
-import Footer from "./modules/Footer";
+import MainPage from "../pages/MainPage/MainPage";
+import Footer from "../modules/Footer";
+import Header from "../modules/Header";
+import { urls } from "../constants/stringConstants";
 
 const router = createBrowserRouter(
   [
