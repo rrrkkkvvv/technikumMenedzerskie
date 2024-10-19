@@ -6,7 +6,11 @@ interface ILinkProps {
 }
 
 const NavLink = ({ url, children }: ILinkProps) => {
-  return <a href={url}>{children}</a>;
+  return (
+    <a target="_blank" href={url}>
+      {children}
+    </a>
+  );
 };
 
 export default NavLink;

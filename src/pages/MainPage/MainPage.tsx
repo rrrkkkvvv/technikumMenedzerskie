@@ -31,13 +31,13 @@ const MainPage = () => {
         </Title>
 
         <div className="carousels__practicesCarouselWrapper">
-          {/* PRAKTYKI KARUSELЬ */}
+          {/* PRACTICIES carousel */}
         </div>
         <Title className="carousels__sponsoresTitle">
           {titles.practiciesPlacesTitle}
         </Title>
         <div className="carousels__practiciesPlacesCarouselWrapper">
-          {/* СПОНСОРЫ KARUSELЬ */}
+          {/* SPONSORES carousel */}
         </div>
       </section>
       <hr />
