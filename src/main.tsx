@@ -4,6 +4,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { urls } from "./constants/stringConstants";
 import Header from "./modules/Header";
 import MainPage from "./pages/MainPage/MainPage";
+import Footer from "./modules/Footer";
 
 const router = createBrowserRouter(
   [
@@ -13,7 +14,7 @@ const router = createBrowserRouter(
         <>
           <Header />
           <Outlet />
-          {/* <Footer/> */}
+          <Footer />
         </>
       ),
       children: [
@@ -30,7 +31,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: urls.basename }
+  { basename: urls.siteRoutes.basename }
 );
 
 createRoot(document.getElementById("root")!).render(

@@ -1,5 +1,5 @@
 import { TFacultInfo } from "../../shared/types/FacultType";
-import Description from "../../ui/Description";
+import Text from "../../ui/Text";
 import Picture from "../../ui/Picture";
 import Title from "../../ui/Title";
 interface ICardProps {
@@ -11,7 +11,7 @@ const Card = ({ facultInfo: { imgUrl, title, text } }: ICardProps) => {
     <div className="cardWrapper">
       <Picture className="" src={imgUrl} alt={title + " image"} />
       <Title className="">{title}</Title>
-      <Description className="">{text}</Description>
+      <Text className="">{text}</Text>
     </div>
   );
 };

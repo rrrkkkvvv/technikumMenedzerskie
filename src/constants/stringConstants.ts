@@ -1,13 +1,30 @@
 import { TFacultInfo } from "../shared/types/FacultType";
 
 export const urls = {
-  basename: "/",
+  siteRoutes: {
+    basename: "/",
+  },
+  adress: "#",
+  contactInfo: {
+    phone: "tel:+48501288576",
+    email: "mailto:tm@plm.pl",
+  },
+  socialNetwork: {
+    facebook: "https://www.facebook.com/tm.bydgoszcz/",
+    instagram: "https://www.instagram.com/tmbydgoszcz/",
+  },
 };
 export const titles = {
   greetingTitle: "Rozwiń skrzydła u nas",
   practicesImagesTitle: "Praktyki i staże zagraniczne",
   practiciesPlacesTitle: "Miejsca praktyk i staży",
+  footerTitle: "Technikum Menedżerskie w Bydgoszczy",
 };
+export const footerLinkNames = {
+  adress:
+    "ul. Toruńska 55-57 85-023 Bydgoszcz woj. kujawsko-pomorskie. Budynek C Akademii Kujawsko-Pomorskiej (KPSW)",
+};
+
 export const headerLinkNames = {
   mainPageLink: "Strona główna",
   admissionToSchoolLink: "Przyjęcie do szkoły",
@@ -16,6 +33,12 @@ export const headerLinkNames = {
   newsLink: "Aktualności",
   contactLink: "Kontakt",
   ukraineLink: "Україна",
+};
+
+export const contactInfo = {
+  email: "tm@plm.pl",
+  phone: "+48 501 288 576",
+  nip: "NIP: 9671012911",
 };
 
 export const facultiesInfo: TFacultInfo[] = [
