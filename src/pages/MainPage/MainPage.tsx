@@ -36,7 +36,7 @@ const MainPage = () => {
         <Title className="carousels__sponsoresTitle">
           {titles.practiciesPlacesTitle}
         </Title>
-        <div className="carousels__sponsoresCarouselWrapper">
+        <div className="carousels__practiciesPlacesCarouselWrapper">
           {/* СПОНСОРЫ KARUSELЬ */}
         </div>
       </section>
