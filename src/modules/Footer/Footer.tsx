@@ -7,6 +7,7 @@ import {
 import NavLink from "../../ui/NavLink";
 import Text from "../../ui/Text";
 import Title from "../../ui/Title";
+import "./styles/Footer.module.scss";
 
 const Footer = () => {
   return (

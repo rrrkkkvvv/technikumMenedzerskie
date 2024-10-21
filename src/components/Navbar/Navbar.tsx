@@ -1,5 +1,6 @@
 import { headerLinkNames } from "../../constants/stringConstants";
 import NavLink from "../../ui/NavLink";
+import "./styles/Navbar.module.scss";
 
 const Navbar = () => {
   return (

@@ -1,6 +1,7 @@
 import Card from "../../components/Card";
 import { titles, facultiesInfo } from "../../constants/stringConstants";
 import Title from "../../ui/Title";
+import "./styles/MainPage.module.scss";
 
 const MainPage = () => {
   return (
