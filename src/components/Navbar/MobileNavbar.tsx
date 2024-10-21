@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { MobileNavLink } from "./ui/MobileNavLink";
 import { headerLinkNames } from "../../constants/stringConstants";
+import NavLink from "../../ui/NavLink";
+import shortid from "shortid";
 
 const variants = {
   open: {
@@ -13,8 +15,12 @@ const variants = {
 
 export const MobileNavbar = () => (
   <motion.ul variants={variants}>
-    {Object.values(headerLinkNames).map((value, i) => (
-      <MobileNavLink key={i}>{value}</MobileNavLink>
+    {headerLinkNames.map((el, i) => (
+      <MobileNavLink key={i}>
+        <NavLink key={shortid.generate()} url={el.path}>
+          {el.name}
+        </NavLink>
+      </MobileNavLink>
     ))}
   </motion.ul>
 );

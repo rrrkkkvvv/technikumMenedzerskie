@@ -1,5 +1,6 @@
 import Card from "../../components/Card";
 import { titles, facultiesInfo } from "../../constants/stringConstants";
+import shortid from "shortid";
 import Title from "../../ui/Title";
 import styles from "./styles/MainPage.module.scss";
 
@@ -21,7 +22,7 @@ const MainPage = () => {
       <hr />
       <section className="mainWrapper__facultiesSection">
         {facultiesInfo.map((facult) => (
-          <Card key={facult.id} facultInfo={facult} />
+          <Card key={shortid.generate()} facultInfo={facult} />
         ))}
       </section>
       <hr />

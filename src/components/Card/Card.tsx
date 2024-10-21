@@ -1,4 +1,4 @@
-import { TFacultInfo } from "../../shared/types/FacultType";
+import { TFacultInfo } from "../../shared/types/TFacultInfo";
 import Text from "../../ui/Text";
 import Picture from "../../ui/Picture";
 import Title from "../../ui/Title";

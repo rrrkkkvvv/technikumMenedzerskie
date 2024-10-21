@@ -1,4 +1,4 @@
-import { TFacultInfo } from "../shared/types/FacultType";
+import { TFacultInfo } from "../shared/types/TFacultInfo";
 
 export const urls = {
   siteRoutes: {
@@ -25,15 +25,15 @@ export const footerLinkNames = {
     "ul. Toruńska 55-57 85-023 Bydgoszcz woj. kujawsko-pomorskie. Budynek C Akademii Kujawsko-Pomorskiej (KPSW)",
 };
 
-export const headerLinkNames = {
-  mainPageLink: "Strona główna",
-  admissionToSchoolLink: "Przyjęcie do szkoły",
-  ourStaffLink: "Nasza kadra",
-  aboutSchoolLink: "O szkole",
-  newsLink: "Aktualności",
-  contactLink: "Kontakt",
-  ukraineLink: "Україна",
-};
+export const headerLinkNames = [
+  { name: "Strona główna", path: "#" },
+  { name: "Przyjęcie do szkoły", path: "#" },
+  { name: "Nasza kadra", path: "#" },
+  { name: "O szkole", path: "#" },
+  { name: "Aktualności", path: "#" },
+  { name: "Kontakt", path: "#" },
+  { name: "Україна", path: "#" },
+];
 
 export const contactInfo = {
   email: "tm@plm.pl",
@@ -43,7 +43,6 @@ export const contactInfo = {
 
 export const facultiesInfo: TFacultInfo[] = [
   {
-    id: 0,
     title: "Programowanie",
     text: `Programista to jeden z najlepiej zarabiających i najbardziej poszukiwanych na rynku pracy zawodów.
      Znakomita droga zawodowa. Programowanie to nie tylko pieniądze, to ciekawa pasja dająca m. in. możliwość programowania robotów, pisania gier 3D,
@@ -51,8 +50,6 @@ export const facultiesInfo: TFacultInfo[] = [
     imgUrl: "",
   },
   {
-    id: 1,
-
     title: "Informatyka",
     text: `To kierunek dla kogoś, kogo fascynuje działanie systemów operacyjnych, oprogramowania i sieci.
      Na zajęciach poznasz budowę komputera i nauczysz się dokonywać jego napraw i modernizacji.
@@ -63,8 +60,6 @@ export const facultiesInfo: TFacultInfo[] = [
     imgUrl: "",
   },
   {
-    id: 2,
-
     title: "Turystyka",
     text: `Malownicze uliczki Pragi, zabytki Akropolu,
      tajemnice Rzymu… one tylko czekają, by je odwiedzić z pilotem/przewodnikiem,
@@ -74,8 +69,6 @@ export const facultiesInfo: TFacultInfo[] = [
     imgUrl: "",
   },
   {
-    id: 3,
-
     title: "Turystyka klasa stewardess i stewardów",
     text: `Klasa o profilu stewardesa/steward to idealny wybór dla osób pragnących międzynarodowej kariery,
      wymagającej umiejętności komunikacyjnych, szybkiej reakcji i elastyczności.
@@ -84,8 +77,6 @@ export const facultiesInfo: TFacultInfo[] = [
     imgUrl: "",
   },
   {
-    id: 4,
-
     title: "Logistyka i spedycja",
     text: `To kierunek dla kogoś, kogo fascynuje sprawne działanie przedsiębiorstw, nie tylko z branży logistycznej.
      Jako uczeń naszej szkoły będziesz odbywać praktyki w firmach działających w całej Polsce i Europie,
@@ -95,8 +86,6 @@ export const facultiesInfo: TFacultInfo[] = [
     imgUrl: "",
   },
   {
-    id: 5,
-
     title: "Logistyka mundurowa",
     text: `Innowacja skierowana do osób wiążących swoją przyszłość z pracą w służbach mundurowych,
      takich jak: wojsko, policja, straż pożarna, żandarmeria, straż graniczna czy wojska obrony terytorialnej.
@@ -106,8 +95,6 @@ export const facultiesInfo: TFacultInfo[] = [
     imgUrl: "",
   },
   {
-    id: 6,
-
     title: "Weterynaria",
     text: `To kierunek dla kogoś kto kocha zwierzęta i chciałby w przyszłości pracować z nimi.
      Na zajęciach poznasz budowę, zwyczaje i sposoby hodowli zwierząt.
