@@ -1,26 +1,42 @@
-import { motion } from "framer-motion";
-import { MobileNavLink } from "./ui/MobileNavLink";
-import { headerLinkNames } from "../../constants/stringConstants";
-import NavLink from "../../ui/NavLink";
-import shortid from "shortid";
+import { motion, useCycle } from "framer-motion";
+import { useRef } from "react";
+import { MobileNavList } from "./ui/MobileNavList";
+import { MenuToggle } from "./ui/MobileNavToggle";
+import { background } from "./styles/Navbar.module.scss";
 
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
   closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    clipPath: "circle(30px at 40px 40px)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
   },
 };
 
-export const MobileNavbar = () => (
-  <motion.ul variants={variants}>
-    {headerLinkNames.map((el, i) => (
-      <MobileNavLink key={i}>
-        <NavLink key={shortid.generate()} url={el.path}>
-          {el.name}
-        </NavLink>
-      </MobileNavLink>
-    ))}
-  </motion.ul>
-);
+export const MobileNavbar = () => {
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  return (
+    <motion.nav
+      initial={false}
+      animate={isOpen ? "open" : "closed"}
+      ref={containerRef}
+    >
+      <motion.div className={background} variants={sidebar} />
+      <MobileNavList />
+      <MenuToggle toggle={() => toggleOpen()} />
+    </motion.nav>
+  );
+};
