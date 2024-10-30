@@ -5,6 +5,7 @@ import MainPage from "../pages/MainPage/MainPage";
 import Footer from "../modules/Footer";
 import Header from "../modules/Header";
 import { urls } from "../constants/stringConstants";
+import "./main.module.scss";
 
 const router = createBrowserRouter(
   [
