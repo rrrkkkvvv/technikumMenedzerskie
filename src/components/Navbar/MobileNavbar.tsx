@@ -24,7 +24,6 @@ export const MobileNavbar = () => {
       >
         <div className={line}></div>
       </div>
-      {/* </button> */}
       <div className={`${menu__content} ${isOpen && open}`}>
         <MobileNavList />
       </div>
