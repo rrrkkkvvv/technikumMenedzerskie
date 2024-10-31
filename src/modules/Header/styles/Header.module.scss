@@ -1,9 +1,10 @@
 .header {
   background-color: #fff;
-  // width: 100%;
+  width: 100%;
+  position: fixed;
   height: 8dvh;
   display: flex;
-  // align-items: center;
+  align-items: center;
   justify-content: space-between;
   @media (min-width: 768px) {
     background-color: lightcoral;
@@ -13,8 +14,3 @@
     background-color: lightgray;
   }
 }
-
-// .background {
-//   width: 300px;
-//   background: #fff;
-// }

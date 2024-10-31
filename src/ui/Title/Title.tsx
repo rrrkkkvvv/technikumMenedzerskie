@@ -1,11 +1,6 @@
-import { ReactNode } from "react";
+import { IUIProps } from "../../shared/types/IUIProps";
 
-interface ITitleProps {
-  children: ReactNode;
-  className: string;
-}
-
-const Title = ({ children, className }: ITitleProps) => {
+const Title = ({ children, className }: IUIProps) => {
   return <h1 className={className}>{children}</h1>;
 };
 

@@ -1,8 +1,8 @@
 import React from "react";
+import { IUIProps } from "../../shared/types/IUIProps";
 
-interface ILinkProps {
+interface ILinkProps extends IUIProps {
   url: string;
-  children: React.ReactNode;
 }
 
 const NavLink = ({ url, children }: ILinkProps) => {

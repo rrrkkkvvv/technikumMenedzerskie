@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {headerLinkNames.map((el) => (
-        <NavLink key={shortid.generate()} url={el.path}>
+        <NavLink className="" key={shortid.generate()} url={el.path}>
           {el.name}
         </NavLink>
       ))}
