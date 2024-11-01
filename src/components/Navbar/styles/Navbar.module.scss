@@ -2,12 +2,12 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 40%;
-  margin-top: 5px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 25px;
+  padding: 20px;
+
   .menu__btn {
     background: transparent;
     display: flex;
@@ -30,14 +30,26 @@
     max-height: 0;
     overflow: hidden;
     background-color: #fff;
-    transition: max-height 0.5s ease, padding 0.3s ease;
+    transition: 0.5s;
     padding: 0;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .nav__list {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+
+      flex-direction: column;
+      gap: 10px;
       list-style: none;
       margin: 0;
       padding: 0;
       .nav__item {
         margin-bottom: 1rem;
+        display: block;
+        font-size: 1.3rem;
         a {
           text-decoration: none;
           color: #333;
@@ -54,7 +66,7 @@
 }
 
 .menu__content.open {
-  max-height: 300px;
+  max-height: 100dvh;
   padding: 1rem;
 }
 

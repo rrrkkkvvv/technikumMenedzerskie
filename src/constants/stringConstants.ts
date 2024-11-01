@@ -29,12 +29,15 @@ export const headerLinkNames = [
   { name: "Strona główna", path: "#" },
   { name: "Przyjęcie do szkoły", path: "#" },
   { name: "Nasza kadra", path: "#" },
-  { name: "O szkole", path: "#" },
   { name: "Aktualności", path: "#" },
   { name: "Kontakt", path: "#" },
   { name: "Україна", path: "#" },
 ];
-
+export const dropdownLinkNames = [
+  { name: "Tylko u nas", path: "#" },
+  { name: "Praktyki i staże", path: "#" },
+  { name: "Partneży strategiczni", path: "#" },
+];
 export const contactInfo = {
   email: "tm@plm.pl",
   phone: "+48 501 288 576",

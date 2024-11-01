@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { MobileNavList } from "./ui/MobileNavList";
+import { motion } from "framer-motion";
+
 import {
   mobile__navbar,
   open,
@@ -8,6 +10,7 @@ import {
   close,
   line,
 } from "./styles/Navbar.module.scss";
+import Dropdown from "../Dropdown";
 
 export const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,15 +21,19 @@ export const MobileNavbar = () => {
 
   return (
     <nav className={mobile__navbar}>
-      <div
-        onClick={handleOpen}
-        className={`${menu__btn}  ${isOpen ? close : ""}`}
-      >
-        <div className={line}></div>
-      </div>
-      <div className={`${menu__content} ${isOpen && open}`}>
-        <MobileNavList />
-      </div>
+      <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
+        <motion.div />
+        <div className={`${menu__content} ${isOpen && open}`}>
+          <MobileNavList isOpen={isOpen} />
+          <Dropdown />
+        </div>
+        <div
+          onClick={handleOpen}
+          className={`${menu__btn}  ${isOpen ? close : ""}`}
+        >
+          <div className={line}></div>
+        </div>
+      </motion.nav>
     </nav>
   );
 };
