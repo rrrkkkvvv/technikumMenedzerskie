@@ -6,16 +6,40 @@ import {
   dropdown__li,
   dropdown__button,
 } from "./styles/Dropdown.module.scss";
-import { Link } from "react-router-dom";
 import { dropdownLinkNames } from "../../constants/stringConstants";
 import NavLink from "../../ui/NavLink";
-const itemVariants = {
+const liVariants = {
   open: {
     opacity: 1,
     y: 0,
     transition: { type: "spring", stiffness: 300, damping: 24 },
   },
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
+};
+
+const ulVariants = {
+  open: {
+    opacity: 1,
+    height: "auto",
+    clipPath: "inset(0% 0% 0% 0% round 10px)",
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.7,
+      delayChildren: 0.3,
+      staggerChildren: 0.05,
+    },
+  },
+  closed: {
+    opacity: 0,
+    height: 0,
+    clipPath: "inset(10% 50% 90% 50% round 10px)",
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.3,
+    },
+  },
 };
 
 const Dropdown = () => {
@@ -50,38 +74,11 @@ const Dropdown = () => {
         className={dropdown__ul}
         initial="closed"
         animate={isOpen ? "open" : "closed"}
-        variants={{
-          open: {
-            opacity: 1,
-            height: "auto",
-            clipPath: "inset(0% 0% 0% 0% round 10px)",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.7,
-              delayChildren: 0.3,
-              staggerChildren: 0.05,
-            },
-          },
-          closed: {
-            opacity: 0,
-            height: 0,
-            clipPath: "inset(10% 50% 90% 50% round 10px)",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.3,
-            },
-          },
-        }}
+        variants={ulVariants}
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
         {dropdownLinkNames.map((el, index) => (
-          <motion.li
-            className={dropdown__li}
-            key={index}
-            variants={itemVariants}
-          >
+          <motion.li className={dropdown__li} key={index} variants={liVariants}>
             <NavLink className="" url={el.path}>
               {el.name}
             </NavLink>
