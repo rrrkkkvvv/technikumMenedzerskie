@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans", serif;
 }
 
 .mainWrapper__greetingSection {
@@ -11,35 +14,66 @@
   background-color: rgb(26, 26, 26);
   color: #fff;
   overflow: hidden;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .greetingSection__title {
+    font-size: 2rem;
+    position: absolute;
+    top: 20%;
+  }
+  .greetingSection__greetingTextWrapper {
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 1.4rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+  }
   .greetingSection__wingsContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100dvw;
 
     .greetingSection__leftWing {
+      position: absolute;
       width: 500px;
-      height: 500px;
+      height: 300px;
       background-repeat: no-repeat;
       background-size: contain;
       background-image: url("../../../../public/icons/leftWing.png");
+      background-position: left;
       transform: translateX(-115%) rotate(-50deg);
+
       animation: flyInLeft 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s
           forwards,
         flapLeft 6s ease-in-out 2s infinite;
     }
 
     .greetingSection__rightWing {
+      position: absolute;
       width: 500px;
-      height: 500px;
+      height: 300px;
       background-repeat: no-repeat;
       background-size: contain;
       background-image: url("../../../../public/icons/rightWing.png");
+      background-position: right;
       transform: translateX(115%) rotate(50deg);
       animation: flyInRight 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s
           forwards,
         flapRight 6s ease-in-out 2s infinite;
+    }
+    @media (min-width: 1024px) {
+      .greetingSection__leftWing,
+      .greetingSection__rightWing {
+        background-size: 500px;
+
+        width: 1000px;
+        height: 600px;
+      }
     }
   }
 }
@@ -51,7 +85,7 @@
   100% {
     transform: translate(0);
     rotate: 0deg;
-    filter: blur(1px);
+    filter: blur(2px);
   }
 }
 
@@ -62,7 +96,7 @@
   100% {
     transform: translate(0);
     rotate: 0deg;
-    filter: blur(1px);
+    filter: blur(2px);
   }
 }
 
