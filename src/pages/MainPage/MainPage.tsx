@@ -8,9 +8,14 @@ const MainPage = () => {
   return (
     <main className="mainWrapper">
       <hr />
-      <section className="mainWrapper__greetingSection">
+      <section className={styles.mainWrapper__greetingSection}>
         <Title className="greetingSection__title">{titles.greetingTitle}</Title>
-
+        <div className={styles.greetingSection__wingsContainer}>
+          {/* greetingSection__leftWing is container for bg image of wing */}
+          <div className={styles.greetingSection__leftWing}></div>
+          {/* greetingSection__rightWing is container for bg image of wing */}
+          <div className={styles.greetingSection__rightWing}></div>
+        </div>
         <div className="greetingSection__greetingTextWrapper">
           Lorem <span>ipsum dolor, sit</span> amet consectetur adipisicing elit.{" "}
           <span>Excepturi voluptatibus</span> quo obcaecati! Lorem ipsum dolor

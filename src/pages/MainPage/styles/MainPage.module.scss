@@ -3,3 +3,85 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.mainWrapper__greetingSection {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  color: #fff;
+  overflow: hidden;
+
+  .greetingSection__wingsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .greetingSection__leftWing {
+      width: 500px;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../../../../public/icons/leftWing.png");
+      transform: translateX(-115%) rotate(-50deg);
+      animation: flyInLeft 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s
+          forwards,
+        flapLeft 6s ease-in-out 2s infinite;
+    }
+
+    .greetingSection__rightWing {
+      width: 500px;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../../../../public/icons/rightWing.png");
+      transform: translateX(115%) rotate(50deg);
+      animation: flyInRight 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s
+          forwards,
+        flapRight 6s ease-in-out 2s infinite;
+    }
+  }
+}
+
+@keyframes flyInLeft {
+  20% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(0);
+    rotate: 0deg;
+    filter: blur(1px);
+  }
+}
+
+@keyframes flyInRight {
+  20% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(0);
+    rotate: 0deg;
+    filter: blur(1px);
+  }
+}
+
+@keyframes flapLeft {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes flapRight {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
