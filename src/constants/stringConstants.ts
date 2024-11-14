@@ -17,7 +17,7 @@ export const urls = {
 
 export const texts = {
   greetingText:
-    "Chcemy Was poznać Zapraszamy do kontaktu telefonicznego w celu umówienia spotkania, na którym dowiecie się wszystkiego o naszym Technikum Poznamy się bliżej oraz rozszyfrujemy predyspozycje przyszłego kandydata 🙂 Telefon 509 831 160",
+    "Chcemy Was poznać Zapraszamy do kontaktu telefonicznego w celu umówienia spotkania, na którym dowiecie się wszystkiego o naszym Technikum Poznamy się bliżej oraz rozszyfrujemy predyspozycje przyszłego kandydata  Telefon 509 831 160",
 };
 export const titles = {
   greetingTitle: "Rozwiń skrzydła u nas",

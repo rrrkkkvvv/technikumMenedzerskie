@@ -19,17 +19,18 @@
   align-items: center;
   flex-direction: column;
   .greetingSection__title {
-    font-size: 2rem;
+    font-size: 2.4rem;
     position: absolute;
-    top: 20%;
+    top: 10%;
   }
   .greetingSection__greetingTextWrapper {
     text-align: center;
     position: absolute;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     max-width: 600px;
-    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
   }
   .greetingSection__wingsContainer {
     display: flex;
@@ -48,8 +49,7 @@
       background-position: left;
       transform: translateX(-115%) rotate(-50deg);
 
-      animation: flyInLeft 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s
-          forwards,
+      animation: flyInLeft 6s cubic-bezier(0.175, 0.885, 0.32, 1) 0.4s forwards,
         flapLeft 6s ease-in-out 2s infinite;
     }
 
@@ -62,19 +62,22 @@
       background-image: url("../../../../public/icons/rightWing.png");
       background-position: right;
       transform: translateX(115%) rotate(50deg);
-      animation: flyInRight 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s
-          forwards,
+      animation: flyInRight 6s cubic-bezier(0.175, 0.885, 0.32, 1) 0.4s forwards,
         flapRight 6s ease-in-out 2s infinite;
     }
     @media (min-width: 1024px) {
+      .greetingSection__title {
+        font-size: 7rem;
+      }
       .greetingSection__leftWing,
       .greetingSection__rightWing {
         background-size: 500px;
-
         width: 1000px;
         height: 600px;
       }
     }
+  }
+  .mainWrapper__facultiesSection {
   }
 }
 
@@ -86,6 +89,7 @@
     transform: translate(0);
     rotate: 0deg;
     filter: blur(2px);
+    opacity: 0.3;
   }
 }
 
@@ -97,6 +101,7 @@
     transform: translate(0);
     rotate: 0deg;
     filter: blur(2px);
+    opacity: 0.3;
   }
 }
 
@@ -117,5 +122,11 @@
   }
   50% {
     transform: rotate(6deg);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
   }
 }

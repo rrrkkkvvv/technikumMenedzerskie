@@ -7,7 +7,6 @@ import styles from "./styles/MainPage.module.scss";
 const MainPage = () => {
   return (
     <main className="mainWrapper">
-      <hr />
       <section className={styles.mainWrapper__greetingSection}>
         <Title className={styles.greetingSection__title}>
           {titles.greetingTitle}
@@ -23,13 +22,11 @@ const MainPage = () => {
         </div>
       </section>
 
-      <hr />
       <section className="mainWrapper__facultiesSection">
         {facultiesInfo.map((facult) => (
           <Card key={shortid.generate()} facultInfo={facult} />
         ))}
       </section>
-      <hr />
 
       <section className="mainWrapper__carousels">
         <Title className="carousels__practicesTitle">
@@ -46,7 +43,6 @@ const MainPage = () => {
           {/* SPONSORES carousel */}
         </div>
       </section>
-      <hr />
     </main>
   );
 };
